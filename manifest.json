@@ -1,0 +1,10 @@
+{
+  "name": "Frame Reactions",
+  "id": "1029439052222458166",
+  "api": "1.0.0",
+  "main": "dist/code.js",
+  "editorType": [
+    "figma"
+  ],
+  "ui": "dist/ui.html"
+}
