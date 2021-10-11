@@ -1,6 +1,6 @@
 var path = require('path');
 var webpack = require('webpack');
-var HtmlWebPackPlugin = require('html-webpack-plugin');
+var HtmlWebpackPlugin = require('html-webpack-plugin');
 var InlineChunkHtmlPlugin = require('react-dev-utils/InlineChunkHtmlPlugin');
 var CopyWebpackPlugin = require('copy-webpack-plugin');
 
@@ -67,14 +67,13 @@ module.exports = function(env) {
       new webpack.DefinePlugin({
         'global': {} // Fix missing symbol error when running in developer VM
       }),
-      new HtmlWebPackPlugin({
+      new HtmlWebpackPlugin({
         title: 'Frame Reactions',
         inject: 'body',
         filename: 'index.html',
         minify: false,
         chunks: ['ui']
-      }),
-      new InlineChunkHtmlPlugin(HtmlWebPackPlugin, [/ui/]),
+      })
     ]
   };
 
@@ -82,12 +81,13 @@ module.exports = function(env) {
 
     params.mode = 'production';
 
+    params.plugins.push(new InlineChunkHtmlPlugin(HtmlWebpackPlugin, [/ui/]));
+
   }
 
   if (/\-\-mode\=development/i.test(process.argv[process.argv.length - 1])) {
 
     params.mode = 'development';
-    params.devtool = 'inline-source-map';
 
     params.devServer = {
       host: 'localhost',
