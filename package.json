@@ -17,7 +17,6 @@
     "babel-loader": "^8.1.0",
     "copy-webpack-plugin": "^6.0.3",
     "css-loader": "^5.2.6",
-    "figma-plugin-ds": "^1.0.1",
     "file-loader": "^6.0.0",
     "html-webpack-plugin": "^4.3.0",
     "less-loader": "^6.2.0",
@@ -27,6 +26,7 @@
     "webpack-dev-server": "^4.3.1"
   },
   "dependencies": {
+    "figma-plugin-ds": "^1.0.1",
     "react": "^17.0.2",
     "react-dev-utils": "^11.0.4",
     "react-dom": "^17.0.2",
