@@ -2,6 +2,7 @@ import React, { useRef } from 'react';
 import dom from 'react-dom';
 
 import logo from "../assets/logo.svg";
+import "figma-plugin-ds/dist/figma-plugin-ds.css"
 import "./ui.less";
 
 var domElement = document.createElement('div')
