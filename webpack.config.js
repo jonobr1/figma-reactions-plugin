@@ -70,7 +70,7 @@ module.exports = function(env) {
       new HtmlWebPackPlugin({
         title: 'Frame Reactions',
         inject: 'body',
-        filename: 'ui.html',
+        filename: 'index.html',
         minify: false,
         chunks: ['ui']
       }),
@@ -78,17 +78,15 @@ module.exports = function(env) {
     ]
   };
 
-  if (/\-\-mode\=production/i.test(process.argv[2])) {
+  if (/\-\-mode\=production/i.test(process.argv[process.argv.length - 1])) {
 
     params.mode = 'production';
 
   }
 
-  if (/\-\-mode\=development/i.test(process.argv[2])) {
+  if (/\-\-mode\=development/i.test(process.argv[process.argv.length - 1])) {
 
     params.mode = 'development';
-
-    params.watch = true;
     params.devtool = 'inline-source-map';
 
     params.devServer = {

@@ -2,7 +2,7 @@ import React, { useRef } from 'react';
 import dom from 'react-dom';
 
 import logo from "../assets/logo.svg";
-import "./ui.css";
+import "./ui.less";
 
 var domElement = document.createElement('div')
 domElement.id = 'react';
