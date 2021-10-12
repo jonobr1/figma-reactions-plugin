@@ -80,7 +80,7 @@ function App(props) {
               parent.postMessage({
                 pluginMessage: {
                   type: 'update',
-                  frame: frame.id,
+                  id: frame.id,
                   tally: tally
                 }
               }, '*');

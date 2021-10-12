@@ -8,7 +8,7 @@ figma.ui.onmessage = function(message) {
   switch (message.type) {
 
     case 'update':
-      updateFrameTallies(message.frame);
+      updateFrameTallies(message);
       break;
 
     case 'reset':
@@ -23,11 +23,11 @@ figma.ui.onmessage = function(message) {
 
 }
 
-function updateFrameTallies(id) {
+function updateFrameTallies({ id, tally }) {
   const frame = getFrameById(id);
   if (frame !== null) {
     figma.viewport.scrollAndZoomIntoView([frame]);
-    frame.setPluginData('tally', JSON.stringify(message.tally));
+    frame.setPluginData('tally', JSON.stringify(tally));
   }
 }
 
