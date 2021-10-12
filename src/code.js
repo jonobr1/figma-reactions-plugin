@@ -1,4 +1,4 @@
-figma.showUI(__html__);
+figma.showUI(__html__, { width: 300, height: 400 });
 
 const frames = figma.currentPage.children.filter(getFrame).map(pruneFrame);
 figma.ui.postMessage({ type: 'frames', data: frames });
