@@ -2,3 +2,24 @@
   margin: 0;
   padding: 0;
 }
+
+#react {
+  p.title {
+    padding: 18px;
+  }
+  div.pivots {
+    float: right;
+    display: flex;
+    margin-top: 10px;
+    margin-right: 18px;
+    margin-bottom: 10px;
+    .button {
+      max-width: 80px;
+      text-align: center;
+      cursor: pointer;
+      & + .button {
+        margin-left: 10px;
+      }
+    }
+  }
+}
